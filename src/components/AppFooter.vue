@@ -3,12 +3,12 @@
         <div class="flex min-w-[30%] order-1">
             <a href="#">Advertising</a>
             <a href="#">Business</a>
-            <a href="#">How Search Works</a>
+            <a href="#">How Search works</a>
         </div>
         <div class="middle-container">
             <a href="#" class="flex items-center">
                 <img class="h-3.5 mr-1.5" src="/leaf.png" />
-                <span>Our Third decade of climate action: join us</span>
+                <span>Our third decade of climate action: join us</span>
             </a>
         </div>
         <div class="flex min-w-[30%] justify-end order-3">
@@ -22,6 +22,7 @@
 <style scoped>
 a {
     @apply text-gray-200 whitespace-nowrap p-[15px] hover:underline no-underline;
+    line-height: normal;
 }
 
 .parent-container {
