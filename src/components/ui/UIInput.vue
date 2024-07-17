@@ -23,9 +23,9 @@ function submitHandler() {
         <div class="parent-container">
             <IconSearch class="ml-4 mr-[13px] text-zinc-400" :size="18" />
 
-            <input class="flex-grow" type="text" v-model="model" @keypress.enter="submitHandler" />
+            <input v-model="model" class="flex-grow" type="text" @keypress.enter="submitHandler" />
 
-            <button v-if="model" @click="clearHandler" title="Clear">
+            <button v-if="model" title="Clear" @click="clearHandler">
                 <IconX class="mx-3 text-zinc-400" :size="22" />
             </button>
         </div>
@@ -34,12 +34,12 @@ function submitHandler() {
 
 <style scoped>
 input {
-    @apply h-full text-gray-200 bg-transparent focus:outline-none;
+    @apply bg-transparent h-full text-gray-200 focus:outline-none;
     font-size: 16px;
 }
 
 .parent-container {
-    @apply flex border-[1px] h-[48px] rounded-full items-center mt-[6px] max-w-[584px] flex-grow;
+    @apply border-[1px] flex flex-grow h-[48px] items-center max-w-[584px] mt-[6px] rounded-full;
     /* Close to border-gray-600 but not quite. */
     border-color: #5f6368;
 }

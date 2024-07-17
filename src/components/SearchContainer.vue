@@ -37,9 +37,9 @@ function searchHandler() {
     <div class="flex flex-col items-center p-5">
         <UIInput v-model="searchTerm" @onSubmit="searchHandler" />
 
-        <div class="flex pt-[18px] gap-1">
+        <div class="flex gap-1 pt-[18px]">
             <UIButton text="Google Search" @onClick="searchHandler" />
-            <UIButton text="I'm Feeling Lucky" animate :secondaryText="randomSearchPhrases" @onClick="luckyHandler" />
+            <UIButton animate :secondaryText="randomSearchPhrases" text="I'm Feeling Lucky" @onClick="luckyHandler" />
         </div>
     </div>
 </template>

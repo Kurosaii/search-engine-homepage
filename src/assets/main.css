@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  @apply font-roboto text-sm h-full;
+  @apply font-roboto h-full text-sm;
   /* Close to neutral-800 but not quite. */
   background: #202124;
 }

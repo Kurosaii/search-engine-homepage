@@ -14,5 +14,3 @@ import SearchContainer from './components/SearchContainer.vue';
 
   <AppFooter />
 </template>
-
-<style scoped></style>

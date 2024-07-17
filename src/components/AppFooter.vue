@@ -5,13 +5,15 @@
             <a href="#">Business</a>
             <a href="#">How Search works</a>
         </div>
+
         <div class="middle-container">
-            <a href="#" class="flex items-center">
+            <a class="flex items-center" href="#">
                 <img class="h-3.5 mr-1.5" src="/leaf.png" />
                 <span>Our third decade of climate action: join us</span>
             </a>
         </div>
-        <div class="flex min-w-[30%] justify-end order-3">
+
+        <div class="flex justify-end min-w-[30%] order-3">
             <a href="#">Privacy</a>
             <a href="#">Terms</a>
             <a href="#">Settings</a>
@@ -21,12 +23,12 @@
 
 <style scoped>
 a {
-    @apply text-gray-200 whitespace-nowrap p-[15px] hover:underline no-underline;
+    @apply no-underline p-[15px] text-gray-200 whitespace-nowrap hover:underline;
     line-height: normal;
 }
 
 .parent-container {
-    @apply bg-neutral-900 px-5 flex flex-wrap justify-between;
+    @apply bg-neutral-900 flex flex-wrap justify-between px-5;
 }
 
 .middle-container {
@@ -39,7 +41,7 @@ a {
     }
 
     .middle-container {
-        @apply order-none w-full justify-center;
+        @apply justify-center order-none w-full;
     }
 }
 </style>
