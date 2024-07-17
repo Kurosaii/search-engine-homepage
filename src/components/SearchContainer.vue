@@ -42,5 +42,3 @@ function searchHandler() {
         </div>
     </div>
 </template>
-
-<style scoped></style>
