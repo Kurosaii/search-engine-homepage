@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 
 import UIButton from './ui/UIButton.vue';
+import UIInput from './ui/UIInput.vue';
 
 const searchTerm = ref('');
 
@@ -34,7 +35,7 @@ function searchHandler() {
 
 <template>
     <div class="flex flex-col items-center p-5">
-        <div class="h-[54px]" />
+        <UIInput v-model="searchTerm" @onSubmit="searchHandler" />
 
         <div class="flex pt-[18px] gap-1">
             <UIButton text="Google Search" @onClick="searchHandler" />
