@@ -11,6 +11,7 @@ html {
 
 body {
   @apply font-roboto text-sm h-full;
+  /* Close to neutral-800 but not quite. */
   background: #202124;
 }
 
