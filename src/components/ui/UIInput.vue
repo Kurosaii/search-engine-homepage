@@ -1,6 +1,5 @@
 <script setup>
 import { IconSearch, IconX } from '@tabler/icons-vue';
-import { defineModel } from 'vue';
 
 const model = defineModel({
     type: String,
