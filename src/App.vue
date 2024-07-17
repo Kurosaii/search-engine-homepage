@@ -1,12 +1,14 @@
 <script setup>
+import AppFooter from './components/AppFooter.vue';
+import AppHeader from './components/AppHeader.vue';
 </script>
 
 <template>
-  <header>
-  </header>
+  <AppHeader />
 
-  <main>
-  </main>
+  <div class="flex-grow" />
+
+  <AppFooter />
 </template>
 
 <style scoped></style>
