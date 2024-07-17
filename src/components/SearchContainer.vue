@@ -1,5 +1,9 @@
 <script setup>
+import { ref } from 'vue';
+
 import UIButton from './ui/UIButton.vue';
+
+const searchTerm = ref('');
 
 const randomSearchPhrases = [
     "I'm Feeling Curious",
@@ -12,6 +16,20 @@ const randomSearchPhrases = [
     "I'm Feeling Artistic",
     "I'm Feeling Funny",
 ];
+
+function luckyHandler(index) {
+    // In a production-ready version, this is where logic would go to navigate to different pages based on the index and the page associated with the phrase.
+    console.log('In a production-ready version, this is where logic would go to navigate to different pages based on the index and the page associated with the phrase. index:', index);
+}
+
+function searchHandler() {
+    if (!searchTerm.value) {
+        return;
+    }
+
+    // In a production-ready version, this is where logic for go for navigating the user to the search page.
+    console.log('In a production-ready version, this is where logic for go for navigating the user to the search page. searchTerm:', searchTerm.value);
+}
 </script>
 
 <template>
@@ -19,8 +37,8 @@ const randomSearchPhrases = [
         <div class="h-[54px]" />
 
         <div class="flex pt-[18px] gap-1">
-            <UIButton text="Google Search" />
-            <UIButton text="I'm Feeling Lucky" animate :secondaryText=randomSearchPhrases />
+            <UIButton text="Google Search" @onClick="searchHandler" />
+            <UIButton text="I'm Feeling Lucky" animate :secondaryText="randomSearchPhrases" @onClick="luckyHandler" />
         </div>
     </div>
 </template>

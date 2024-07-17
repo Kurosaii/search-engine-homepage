@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue';
+
 const props = defineProps({
     text: {
         type: String,
@@ -16,17 +18,30 @@ const props = defineProps({
     },
 });
 
+const secondaryIndex = ref(0);
+
+const emit = defineEmits(['onClick']);
+
+function clickHandler() {
+    if (!props.animate) {
+        emit('onClick');
+    } else {
+        emit('onClick', secondaryIndex.value);
+    }
+}
+
 function focusHandler() {
     if (props.animate) {
         // In a production-ready version, this is where logic could be triggered to handle cycling through the props.secondaryText,
         // picking a random one, and leaving it displayed to the user.
         // This functionality can be seen by hovering over the "I'm Feeling Lucky" button, which brings you to various Google-specific pages when clicked.
+        // The secondaryIndex ref would get updated to reflect which entry was selected so the parent could handle the interaction differently if needed.
     }
 }
 </script>
 
 <template>
-    <button @focus="focusHandler">
+    <button :aria-label="props.text" @click="clickHandler" @focus="focusHandler">
         {{ props.text }}
     </button>
 </template>
